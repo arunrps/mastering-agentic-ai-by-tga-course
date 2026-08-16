@@ -8,12 +8,19 @@ Run with:  streamlit run app.py
 """
 
 from datetime import timedelta
+from pathlib import Path
 
 import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
 
-DATA_FILE = "api_logs.csv"
+# Resolved against this file's own folder, not the current working directory.
+# A bare "api_logs.csv" means "look in whatever folder the command was run
+# from", which is this one locally but the repository root on Streamlit
+# Community Cloud -- where the app is launched as week-01/app.py. __file__ is
+# the path to this script, .parent is the folder holding it, and / joins them,
+# so the CSV is found the same way no matter where the app is started from.
+DATA_FILE = Path(__file__).parent / "api_logs.csv"
 
 # Charts are bucketed into 5-minute windows. Per-minute buckets would hold only
 # ~140 requests each, and a p95 over ~18 successful checkouts is so noisy that
