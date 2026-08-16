@@ -7,6 +7,8 @@ Project work for [Mastering Agentic AI](https://maven.com/aishwarya-srinivasan/m
 
 ## Week 1 — API Incident Explorer
 
+**▶ [Open the live app](https://arunrps-api-incident-explorer.streamlit.app)**
+
 **Theme:** Data Analysis with Vibe Coding · **Path B** (own application)
 
 *From traffic signals to an investigation shortlist.*
@@ -77,4 +79,8 @@ streamlit run app.py
 
 Then open http://localhost:8501
 
-Built with Streamlit, pandas and plotly.
+The data path is resolved against the location of `app.py` rather than the working
+directory, so the app also runs from the repository root with
+`streamlit run week-01/app.py` — which is how it is launched in deployment.
+
+Built with Streamlit, pandas and plotly. Deployed on Streamlit Community Cloud.
