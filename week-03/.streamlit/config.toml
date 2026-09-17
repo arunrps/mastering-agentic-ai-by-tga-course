@@ -1,0 +1,21 @@
+# Light neutral operations console. Same palette as Week 2, deliberately: three
+# apps that look like one system read as a product rather than three exercises.
+#
+# Red (#DC2626) is absent from this file. It is reserved for genuinely elevated
+# states and set per-element in the app. In Week 1 the widget accent was red, so
+# every filter chip rendered alarming and red stopped carrying signal.
+
+[theme]
+base = "light"
+font = "sans-serif"
+
+backgroundColor = "#F6F8FB"
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#172033"
+primaryColor = "#2563EB"
+
+[theme.sidebar]
+backgroundColor = "#0F172A"
+
+[server]
+headless = true

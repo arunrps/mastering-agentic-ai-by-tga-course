@@ -1,0 +1,8 @@
+# Runtime query-embedding cache for search_runbooks. Grows per distinct query,
+# local convenience only, correct for nobody else.
+#
+# .index/vectors.npy and .index/manifest.json ARE committed, deliberately: the
+# deployed app serves from the index instead of re-embedding the corpus on every
+# Community Cloud cold start. Same decision as Week 2.
+.index/query_vectors.npz
+.index/spend.jsonl
