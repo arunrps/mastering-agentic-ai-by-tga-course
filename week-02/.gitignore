@@ -1,0 +1,9 @@
+# Runtime query-embedding cache. Grows per distinct question asked, is a local
+# convenience only, and must not be committed -- it would make the repo grow
+# with every demo run and would never be correct for anyone else.
+#
+# .index/vectors.npy and .index/manifest.json ARE committed, deliberately.
+# See the deploy note in WEEK2_BUILD_HANDOFF.md: shipping the index means
+# Streamlit Community Cloud serves from it instead of re-embedding the corpus
+# on every cold start, which on a free tier that sleeps is a recurring cost.
+.index/query_vectors.npz

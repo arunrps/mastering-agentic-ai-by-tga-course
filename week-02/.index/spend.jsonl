@@ -1,0 +1,60 @@
+{"timestamp": "2026-09-11T19:26:37", "operation": "embed_corpus", "model": "Qwen/Qwen3-Embedding-8B", "tokens": 23309, "usd": 0.00023309, "note": "106 texts"}
+{"timestamp": "2026-09-11T19:28:48", "operation": "query", "model": "Qwen/Qwen3-Embedding-8B", "tokens": 46, "usd": 4.6e-07, "note": "1 texts"}
+{"timestamp": "2026-09-11T19:29:26", "operation": "query", "model": "Qwen/Qwen3-Embedding-8B", "tokens": 46, "usd": 4.6e-07, "note": "1 texts"}
+{"timestamp": "2026-09-11T19:29:30", "operation": "query", "model": "Qwen/Qwen3-Embedding-8B", "tokens": 46, "usd": 4.6e-07, "note": "1 texts"}
+{"timestamp": "2026-09-11T19:29:34", "operation": "query", "model": "Qwen/Qwen3-Embedding-8B", "tokens": 46, "usd": 4.6e-07, "note": "1 texts"}
+{"timestamp": "2026-09-11T19:29:41", "operation": "query", "model": "Qwen/Qwen3-Embedding-8B", "tokens": 46, "usd": 4.6e-07, "note": "1 texts"}
+{"timestamp": "2026-09-11T20:09:31", "operation": "query", "model": "Qwen/Qwen3-Embedding-8B", "tokens": 46, "usd": 4.6e-07, "note": "1 texts"}
+{"timestamp": "2026-09-11T20:09:32", "operation": "query", "model": "Qwen/Qwen3-Embedding-8B", "tokens": 45, "usd": 4.5e-07, "note": "1 texts"}
+{"timestamp": "2026-09-11T20:09:33", "operation": "query", "model": "Qwen/Qwen3-Embedding-8B", "tokens": 49, "usd": 4.9e-07, "note": "1 texts"}
+{"timestamp": "2026-09-11T20:09:40", "operation": "query", "model": "Qwen/Qwen3-Embedding-8B", "tokens": 49, "usd": 4.9e-07, "note": "1 texts"}
+{"timestamp": "2026-09-11T20:09:41", "operation": "query", "model": "Qwen/Qwen3-Embedding-8B", "tokens": 50, "usd": 5e-07, "note": "1 texts"}
+{"timestamp": "2026-09-11T20:09:48", "operation": "query", "model": "Qwen/Qwen3-Embedding-8B", "tokens": 51, "usd": 5.1e-07, "note": "1 texts"}
+{"timestamp": "2026-09-11T20:09:49", "operation": "query", "model": "Qwen/Qwen3-Embedding-8B", "tokens": 48, "usd": 4.8e-07, "note": "1 texts"}
+{"timestamp": "2026-09-11T20:09:52", "operation": "query", "model": "Qwen/Qwen3-Embedding-8B", "tokens": 45, "usd": 4.5e-07, "note": "1 texts"}
+{"timestamp": "2026-09-11T20:09:53", "operation": "query", "model": "Qwen/Qwen3-Embedding-8B", "tokens": 45, "usd": 4.5e-07, "note": "1 texts"}
+{"timestamp": "2026-09-11T20:09:54", "operation": "query", "model": "Qwen/Qwen3-Embedding-8B", "tokens": 48, "usd": 4.8e-07, "note": "1 texts"}
+{"timestamp": "2026-09-11T20:09:55", "operation": "query", "model": "Qwen/Qwen3-Embedding-8B", "tokens": 49, "usd": 4.9e-07, "note": "1 texts"}
+{"timestamp": "2026-09-11T20:10:02", "operation": "query", "model": "Qwen/Qwen3-Embedding-8B", "tokens": 46, "usd": 4.6e-07, "note": "1 texts"}
+{"timestamp": "2026-09-11T20:10:03", "operation": "query", "model": "Qwen/Qwen3-Embedding-8B", "tokens": 42, "usd": 4.2e-07, "note": "1 texts"}
+{"timestamp": "2026-09-11T20:10:05", "operation": "query", "model": "Qwen/Qwen3-Embedding-8B", "tokens": 47, "usd": 4.7e-07, "note": "1 texts"}
+{"timestamp": "2026-09-11T20:10:06", "operation": "query", "model": "Qwen/Qwen3-Embedding-8B", "tokens": 44, "usd": 4.4e-07, "note": "1 texts"}
+{"timestamp": "2026-09-11T20:10:07", "operation": "query", "model": "Qwen/Qwen3-Embedding-8B", "tokens": 46, "usd": 4.6e-07, "note": "1 texts"}
+{"timestamp": "2026-09-11T20:10:08", "operation": "query", "model": "Qwen/Qwen3-Embedding-8B", "tokens": 47, "usd": 4.7e-07, "note": "1 texts"}
+{"timestamp": "2026-09-11T20:10:09", "operation": "query", "model": "Qwen/Qwen3-Embedding-8B", "tokens": 49, "usd": 4.9e-07, "note": "1 texts"}
+{"timestamp": "2026-09-11T20:10:10", "operation": "query", "model": "Qwen/Qwen3-Embedding-8B", "tokens": 50, "usd": 5e-07, "note": "1 texts"}
+{"timestamp": "2026-09-11T20:10:11", "operation": "query", "model": "Qwen/Qwen3-Embedding-8B", "tokens": 43, "usd": 4.3e-07, "note": "1 texts"}
+{"timestamp": "2026-09-11T20:10:12", "operation": "query", "model": "Qwen/Qwen3-Embedding-8B", "tokens": 43, "usd": 4.3e-07, "note": "1 texts"}
+{"timestamp": "2026-09-11T20:10:12", "operation": "query", "model": "Qwen/Qwen3-Embedding-8B", "tokens": 51, "usd": 5.1e-07, "note": "1 texts"}
+{"timestamp": "2026-09-11T20:10:13", "operation": "query", "model": "Qwen/Qwen3-Embedding-8B", "tokens": 39, "usd": 3.9e-07, "note": "1 texts"}
+{"timestamp": "2026-09-11T20:10:17", "operation": "query", "model": "Qwen/Qwen3-Embedding-8B", "tokens": 44, "usd": 4.4e-07, "note": "1 texts"}
+{"timestamp": "2026-09-11T20:13:23", "operation": "generate", "model": "openai/gpt-oss-120b", "tokens": 3415, "usd": 3.415e-05, "note": "checkout throwing 503s, where do i start?"}
+{"timestamp": "2026-09-11T20:13:37", "operation": "generate", "model": "openai/gpt-oss-120b", "tokens": 3415, "usd": 3.415e-05, "note": "checkout throwing 503s, where do i start?"}
+{"timestamp": "2026-09-11T20:14:20", "operation": "generate", "model": "openai/gpt-oss-120b", "tokens": 3610, "usd": 3.61e-05, "note": "checkout throwing 503s, where do i start?"}
+{"timestamp": "2026-09-11T20:14:24", "operation": "generate", "model": "openai/gpt-oss-120b", "tokens": 2697, "usd": 2.697e-05, "note": "partner-api getting 429s, where are the limits documented?"}
+{"timestamp": "2026-09-11T20:14:53", "operation": "generate", "model": "openai/gpt-oss-120b", "tokens": 3258, "usd": 3.258e-05, "note": "checkout throwing 503s, where do i start?"}
+{"timestamp": "2026-09-11T20:14:56", "operation": "generate", "model": "openai/gpt-oss-120b", "tokens": 3056, "usd": 3.056e-05, "note": "refunds failing too \u2014 same payment-service problem or separa"}
+{"timestamp": "2026-09-11T20:15:01", "operation": "generate", "model": "openai/gpt-oss-120b", "tokens": 3539, "usd": 3.539e-05, "note": "only mobile-app getting errors, what do i check that's diffe"}
+{"timestamp": "2026-09-11T20:15:03", "operation": "generate", "model": "openai/gpt-oss-120b", "tokens": 2389, "usd": 2.389e-05, "note": "payment-service just deployed, can i roll it back or do i ne"}
+{"timestamp": "2026-09-11T20:15:06", "operation": "generate", "model": "openai/gpt-oss-120b", "tokens": 3042, "usd": 3.042e-05, "note": "a few login 401s \u2014 actual incident or people getting passwor"}
+{"timestamp": "2026-09-11T20:15:09", "operation": "generate", "model": "openai/gpt-oss-120b", "tokens": 2464, "usd": 2.464e-05, "note": "search is really slow but all 200s, does that count as degra"}
+{"timestamp": "2026-09-11T20:15:15", "operation": "generate", "model": "openai/gpt-oss-120b", "tokens": 3366, "usd": 3.366e-05, "note": "3 refund failures and barely any traffic, enough to wake som"}
+{"timestamp": "2026-09-11T20:15:20", "operation": "generate", "model": "openai/gpt-oss-120b", "tokens": 3005, "usd": 3.005e-05, "note": "timeouts stopped but latency still high, can i close this?"}
+{"timestamp": "2026-09-11T20:15:24", "operation": "generate", "model": "openai/gpt-oss-120b", "tokens": 2736, "usd": 2.736e-05, "note": "cart works but orders failing, which inventory-service check"}
+{"timestamp": "2026-09-11T20:15:27", "operation": "generate", "model": "openai/gpt-oss-120b", "tokens": 2935, "usd": 2.935e-05, "note": "partner-api getting 429s, where are the limits documented?"}
+{"timestamp": "2026-09-11T20:15:31", "operation": "generate", "model": "openai/gpt-oss-120b", "tokens": 3340, "usd": 3.34e-05, "note": "admin-portal blank but web-app fine, frontend issue or somet"}
+{"timestamp": "2026-09-11T20:15:34", "operation": "generate", "model": "openai/gpt-oss-120b", "tokens": 2797, "usd": 2.797e-05, "note": "two payment runbooks say different things, which one is curr"}
+{"timestamp": "2026-09-11T20:15:36", "operation": "generate", "model": "openai/gpt-oss-120b", "tokens": 2268, "usd": 2.268e-05, "note": "payment restart procedure \u2014 what needs checking first?"}
+{"timestamp": "2026-09-11T20:15:40", "operation": "generate", "model": "openai/gpt-oss-120b", "tokens": 3414, "usd": 3.414e-05, "note": "checkout timed out, is retrying safe or could we charge twic"}
+{"timestamp": "2026-09-11T20:15:43", "operation": "generate", "model": "openai/gpt-oss-120b", "tokens": 2500, "usd": 2.5e-05, "note": "inventory owner not answering, who's next on escalation?"}
+{"timestamp": "2026-09-11T20:15:46", "operation": "generate", "model": "openai/gpt-oss-120b", "tokens": 3219, "usd": 3.219e-05, "note": "failures across unrelated endpoints, how do i check gateway "}
+{"timestamp": "2026-09-11T20:15:50", "operation": "generate", "model": "openai/gpt-oss-120b", "tokens": 2769, "usd": 2.769e-05, "note": "could the external payment provider be down, where do we che"}
+{"timestamp": "2026-09-11T20:15:52", "operation": "generate", "model": "openai/gpt-oss-120b", "tokens": 2618, "usd": 2.618e-05, "note": "alert firing but no recent logs, is the service quiet or is "}
+{"timestamp": "2026-09-11T20:15:56", "operation": "generate", "model": "openai/gpt-oss-120b", "tokens": 3089, "usd": 3.089e-05, "note": "refund says success but customer hasn't got the money, where"}
+{"timestamp": "2026-09-11T20:16:02", "operation": "generate", "model": "openai/gpt-oss-120b", "tokens": 2803, "usd": 2.803e-05, "note": "everything looks bad, what do i check first?"}
+{"timestamp": "2026-09-11T20:16:05", "operation": "generate", "model": "openai/gpt-oss-120b", "tokens": 2506, "usd": 2.506e-05, "note": "do we even have a runbook for this?"}
+{"timestamp": "2026-09-11T20:16:08", "operation": "generate", "model": "openai/gpt-oss-120b", "tokens": 3071, "usd": 3.071e-05, "note": "is this only one region? wait we only have one region \u2014 what"}
+{"timestamp": "2026-09-11T20:16:12", "operation": "generate", "model": "openai/gpt-oss-120b", "tokens": 3064, "usd": 3.064e-05, "note": "payment declined but inventory still reserved"}
+{"timestamp": "2026-09-11T20:16:17", "operation": "generate", "model": "openai/gpt-oss-120b", "tokens": 2669, "usd": 2.669e-05, "note": "why is checkout hitting inventory twice and who decided that"}
+{"timestamp": "2026-09-11T20:22:27", "operation": "query", "model": "Qwen/Qwen3-Embedding-8B", "tokens": 50, "usd": 5e-07, "note": "1 texts"}
+{"timestamp": "2026-09-11T20:22:32", "operation": "generate", "model": "openai/gpt-oss-120b", "tokens": 3222, "usd": 3.222e-05, "note": "a few login 401s \u2014 actual incident or people getting passwor"}

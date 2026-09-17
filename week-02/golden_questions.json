@@ -1,0 +1,208 @@
+{
+  "_comment": [
+    "Machine-readable form of EVAL_QUESTIONS.md. The markdown is the document a human",
+    "reads and is the source of truth for intent; this file is what the harness runs.",
+    "Question text is copied verbatim, including the lowercase and the missing",
+    "apostrophes -- these are what an on-call engineer actually types at 2 AM, and",
+    "cleaning them up would make retrieval look better than it is.",
+    "",
+    "expected_class is what SHOULD happen, from EVAL_QUESTIONS.md section 2.",
+    "expected_documents is what the answer needs, not everything that might be relevant.",
+    "service is the scope the detector would supply; null means no service scope,",
+    "which is itself part of the test for the vague and meta questions."
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "text": "checkout throwing 503s, where do i start?",
+      "expected_class": "answered",
+      "expected_documents": ["RB-PAY-000", "RB-PAY-001"],
+      "service": "payment-service",
+      "note": "The baseline case. Two documents, ordered: classify with RB-PAY-000 first."
+    },
+    {
+      "id": "Q2",
+      "text": "refunds failing too — same payment-service problem or separate thing?",
+      "expected_class": "answered",
+      "expected_documents": ["RB-PAY-002"],
+      "service": "payment-service",
+      "note": "Planted partial-answer test, run in the harder direction. Sibling corroboration lives only in RB-PAY-002; RB-PAY-001 does not even cross-reference it."
+    },
+    {
+      "id": "Q3",
+      "text": "only mobile-app getting errors, what do i check that's different from web?",
+      "expected_class": "partial",
+      "expected_documents": ["RB-PAY-002", "RB-AUTH-001"],
+      "service": null,
+      "note": "UNPLANNED GAP. Fragments exist; no consumer-dimension triage procedure. Must say so."
+    },
+    {
+      "id": "Q4",
+      "text": "payment-service just deployed, can i roll it back or do i need approval?",
+      "expected_class": "restricted",
+      "expected_documents": ["POL-DEPLOY-001"],
+      "service": "payment-service",
+      "note": "The restricted document. Must be named as existing-but-unavailable, never as absent."
+    },
+    {
+      "id": "Q5",
+      "text": "a few login 401s — actual incident or people getting passwords wrong?",
+      "expected_class": "answered",
+      "expected_documents": ["RB-AUTH-001", "RB-AUTH-000"],
+      "service": "auth-service",
+      "note": "RB-AUTH-000's answer is in its (overview) section -- the untitled preamble that section-iterating chunking would have dropped."
+    },
+    {
+      "id": "Q6",
+      "text": "search is really slow but all 200s, does that count as degraded?",
+      "expected_class": "answered",
+      "expected_documents": ["RB-CAT-002", "RB-CAT-000", "POL-SLO-001"],
+      "service": "catalog-service",
+      "note": "Capacity against fault, plus declared objectives."
+    },
+    {
+      "id": "Q7",
+      "text": "3 refund failures and barely any traffic, enough to wake someone up?",
+      "expected_class": "answered",
+      "expected_documents": ["POL-SLO-001", "RB-PAY-002", "POL-SEV-001"],
+      "service": "payment-service",
+      "note": "Strongest question in the set. Three documents. Two-sided answer: does not clear the floor, and that is not the same as nothing being wrong."
+    },
+    {
+      "id": "Q8",
+      "text": "timeouts stopped but latency still high, can i close this?",
+      "expected_class": "partial",
+      "expected_documents": ["POL-SEV-001"],
+      "service": null,
+      "note": "UNPLANNED GAP. No closure criteria anywhere. POL-SEV-001 covers time-to-classification and says so explicitly."
+    },
+    {
+      "id": "Q9",
+      "text": "cart works but orders failing, which inventory-service checks apply?",
+      "expected_class": "answered",
+      "expected_documents": ["RB-INV-000", "RB-INV-002"],
+      "service": "inventory-service",
+      "note": "Negative-corroboration nuance: the two endpoints exercise different paths, so a quiet /cart is weak evidence."
+    },
+    {
+      "id": "Q10",
+      "text": "partner-api getting 429s, where are the limits documented?",
+      "expected_class": "not_in_corpus",
+      "expected_documents": [],
+      "service": null,
+      "note": "No rate-limit documentation. Corpus is 5xx and latency only."
+    },
+    {
+      "id": "Q11",
+      "text": "admin-portal blank but web-app fine, frontend issue or something behind it?",
+      "expected_class": "not_in_corpus",
+      "expected_documents": [],
+      "service": null,
+      "note": "No client-side or frontend guidance. CDN and edge are an explicit manifest 4.4 gap."
+    },
+    {
+      "id": "Q12",
+      "text": "two payment runbooks say different things, which one is current?",
+      "expected_class": "answered",
+      "expected_documents": ["RB-PAY-000"],
+      "service": "payment-service",
+      "note": "THE STATUS-FILTER DEMO. RB-PAY-000-ARCHIVED must not be presented as current. Run both ways on video."
+    },
+    {
+      "id": "Q13",
+      "text": "payment restart procedure — what needs checking first?",
+      "expected_class": "not_in_corpus",
+      "expected_documents": [],
+      "service": "payment-service",
+      "note": "A strong refusal quotes the 'classification only, not remediation' scope line rather than just saying no."
+    },
+    {
+      "id": "Q14",
+      "text": "checkout timed out, is retrying safe or could we charge twice?",
+      "expected_class": "partial",
+      "expected_documents": ["RB-PAY-001", "RB-INV-002"],
+      "service": null,
+      "note": "Most interesting question in the set. Retry reasoning lives on a different endpoint on a different service. Correct answer is escalate; watch whether it cites across services and how it hedges."
+    },
+    {
+      "id": "Q15",
+      "text": "inventory owner not answering, who's next on escalation?",
+      "expected_class": "answered",
+      "expected_documents": ["CAT-OWN-001", "CAT-DEP-001"],
+      "service": "inventory-service",
+      "note": "PLANTED STALE ENTRY. CAT-DEP-001 says order-fulfilment, a superseded name. The best answer names the conflict rather than silently picking one."
+    },
+    {
+      "id": "Q16",
+      "text": "failures across unrelated endpoints, how do i check gateway vs dns?",
+      "expected_class": "not_in_corpus",
+      "expected_documents": [],
+      "service": null,
+      "note": "No gateway-level or DNS guidance."
+    },
+    {
+      "id": "Q17",
+      "text": "could the external payment provider be down, where do we check that?",
+      "expected_class": "not_in_corpus",
+      "expected_documents": ["CAT-DEP-001"],
+      "service": null,
+      "note": "BEST REFUSAL IN THE SET -- the corpus refuses itself. CAT-DEP-001 states no downstream dependencies are declared, that this is not an assertion that none exist, and that such questions escalate. Should cite that passage, not go silent."
+    },
+    {
+      "id": "Q18",
+      "text": "alert firing but no recent logs, is the service quiet or is logging broken?",
+      "expected_class": "not_in_corpus",
+      "expected_documents": [],
+      "service": null,
+      "note": "Telemetry-pipeline health not covered. POL-SLO-001's bucket precondition is adjacent but does not answer it."
+    },
+    {
+      "id": "Q19",
+      "text": "refund says success but customer hasn't got the money, where do we trace it?",
+      "expected_class": "partial",
+      "expected_documents": ["RB-PAY-000", "RB-PAY-001"],
+      "service": "payment-service",
+      "note": "Correctness rather than availability -- class 4, invisible in both series. No tracing procedure exists. Classify, escalate, do not reconstruct."
+    },
+    {
+      "id": "Q20",
+      "text": "everything looks bad, what do i check first?",
+      "expected_class": "partial",
+      "expected_documents": [],
+      "service": null,
+      "note": "Genuinely too vague. Tests whether the system asks for narrowing or dumps every runbook it has."
+    },
+    {
+      "id": "Q21",
+      "text": "do we even have a runbook for this?",
+      "expected_class": "partial",
+      "expected_documents": [],
+      "service": null,
+      "note": "META-QUESTION about coverage, not content. Correct behaviour is to report what exists rather than answer an unstated question."
+    },
+    {
+      "id": "Q22",
+      "text": "is this only one region? wait we only have one region — what's the fallback?",
+      "expected_class": "not_in_corpus",
+      "expected_documents": [],
+      "service": null,
+      "note": "FALSE PREMISE, self-corrected mid-sentence. Must follow the correction, then refuse -- nothing on regional fallback."
+    },
+    {
+      "id": "Q23",
+      "text": "payment declined but inventory still reserved",
+      "expected_class": "partial",
+      "expected_documents": ["RB-INV-000"],
+      "service": null,
+      "note": "Cross-service state inconsistency, two teams, no single runbook. RB-INV-000's divergence procedure is adjacent but covers cart-versus-order. Watch for over-transfer."
+    },
+    {
+      "id": "Q24",
+      "text": "why is checkout hitting inventory twice and who decided that?",
+      "expected_class": "not_in_corpus",
+      "expected_documents": ["CAT-DEP-001"],
+      "service": null,
+      "note": "Architecture question during an incident. CAT-DEP-001 is a declared map, not a design rationale, and says so."
+    }
+  ]
+}

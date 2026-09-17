@@ -1,0 +1,10 @@
+# Test and tooling dependencies. Deliberately NOT in requirements.txt: that is
+# what Streamlit Community Cloud installs, and the deployed app must not pull a
+# test runner or a tokenizer library.
+pytest>=8.0
+
+# Tokenizer only -- used by `python ingestion.py --fetch-tokenizer` to count
+# embedding tokens exactly rather than estimating, and by embedding.py to price
+# a run before making it. transformers does not pull torch on its own, so this
+# stays light. The deployed app never counts tokens, so it never needs this.
+transformers>=4.40

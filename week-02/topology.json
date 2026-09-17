@@ -1,0 +1,100 @@
+{
+  "_comment": [
+    "Declared service topology for the week-01 synthetic platform.",
+    "This file is the AUTHORITY on which backend serves which endpoint, who owns",
+    "each, and which runbook applies. The app no longer rediscovers its own",
+    "architecture from whatever happens to appear in the selected window.",
+    "",
+    "runbook_id scheme -- stable and readable, because these are the join keys to",
+    "the Week 2 corpus:  RB-<SERVICE CODE>-000  is the service-level runbook,",
+    "RB-<SERVICE CODE>-001 upwards are per-endpoint runbooks under that service.",
+    "Codes: PAY=payment-service, INV=inventory-service, CAT=catalog-service,",
+    "AUTH=auth-service.",
+    "",
+    "The slo_* fields are DECLARED BUT NOT CONSUMED. Nothing computes an error",
+    "budget or a burn rate from them: six hours of data cannot support a credible",
+    "burn rate, and a number that looks like a burn rate but isn't is worse than",
+    "no number. They exist so a later week can use them, and so a reviewer can",
+    "see the thresholds were declared rather than reverse-engineered from the",
+    "same telemetry they are meant to judge.",
+    "",
+    "No downstream external dependencies are declared (databases, third-party",
+    "gateways). Nothing in the telemetry can observe them, so declaring them",
+    "would be decoration -- an architecture diagram, not an operational fact."
+  ],
+  "version": "topology-2026-08-20.a",
+  "platform": "acme-commerce",
+  "region": "us-east-1",
+
+  "endpoints": {
+    "/checkout": {
+      "backend_service": "payment-service",
+      "business_capability": "order payment",
+      "runbook_id": "RB-PAY-001",
+      "owner_team": "payments-platform"
+    },
+    "/refunds": {
+      "backend_service": "payment-service",
+      "business_capability": "payment reversal",
+      "runbook_id": "RB-PAY-002",
+      "owner_team": "payments-platform"
+    },
+    "/cart": {
+      "backend_service": "inventory-service",
+      "business_capability": "basket management",
+      "runbook_id": "RB-INV-001",
+      "owner_team": "fulfilment-core"
+    },
+    "/orders": {
+      "backend_service": "inventory-service",
+      "business_capability": "order history",
+      "runbook_id": "RB-INV-002",
+      "owner_team": "fulfilment-core"
+    },
+    "/products": {
+      "backend_service": "catalog-service",
+      "business_capability": "product detail",
+      "runbook_id": "RB-CAT-001",
+      "owner_team": "catalog-discovery"
+    },
+    "/search": {
+      "backend_service": "catalog-service",
+      "business_capability": "product search",
+      "runbook_id": "RB-CAT-002",
+      "owner_team": "catalog-discovery"
+    },
+    "/login": {
+      "backend_service": "auth-service",
+      "business_capability": "customer authentication",
+      "runbook_id": "RB-AUTH-001",
+      "owner_team": "identity-access"
+    }
+  },
+
+  "backends": {
+    "payment-service": {
+      "owner_team": "payments-platform",
+      "runbook_id": "RB-PAY-000",
+      "slo_p95_latency_ms": 300,
+      "slo_max_5xx_rate_pct": 0.5
+    },
+    "inventory-service": {
+      "owner_team": "fulfilment-core",
+      "runbook_id": "RB-INV-000",
+      "slo_p95_latency_ms": 250,
+      "slo_max_5xx_rate_pct": 0.5
+    },
+    "catalog-service": {
+      "owner_team": "catalog-discovery",
+      "runbook_id": "RB-CAT-000",
+      "slo_p95_latency_ms": 450,
+      "slo_max_5xx_rate_pct": 0.5
+    },
+    "auth-service": {
+      "owner_team": "identity-access",
+      "runbook_id": "RB-AUTH-000",
+      "slo_p95_latency_ms": 250,
+      "slo_max_5xx_rate_pct": 0.5
+    }
+  }
+}

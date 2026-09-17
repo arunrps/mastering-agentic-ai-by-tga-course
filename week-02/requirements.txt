@@ -1,0 +1,5 @@
+streamlit
+pyyaml
+numpy
+openai
+rank_bm25
